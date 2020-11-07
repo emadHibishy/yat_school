@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+*{
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+.about span,
+.advantages h2,
+.advantages .card h4,
+.graduants h2,
+.graduants .card h4,
+.goals h2{
+    color:#fa4f0b;
+}
+
+
+/* ==========navbar=========== */
+
+
+.navbar{
+    /* height: 70px; */
+    padding: 0px;
+    background-color: #343a40;
+}
+.navbar-brand{
+    width: 57px;
+}
+.navbar button span{
+    display: block;
+    width: 30px;
+    margin: 5px;
+    height: 2px;
+    background-color:#ddd;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+.navbar-nav{
+    align-items: center;
+}
+.navbar-nav li{
+    padding: 5px;
+}
+.navbar-nav li a {
+    font-size: 18px;
+    margin:auto 8px;
+    color: rgb(236, 236, 236);
+    transition: all 0.5s;
+    padding:  12px;
+}
+.navbar-nav li.active a,
+.navbar-nav li.active a:hover{
+    color: #face0b ;
+    padding: 12px;
+}
+.navbar-nav li a:hover{
+    color: #1ee4e7de ;
+}
+.column{
+    height:48px;
+    border-right: 1px solid #face0b;
+}
+
+
+
+/* ==================carousel================== */
+
+
+.carousel img{
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+}
+.carousel-caption{
+    margin-bottom: 20%;
+    background-color: rgba(3,3,3,0.3);
+    border-radius: 20px;
+
+}
+.carousel p,
+.carousel h3{
+    color: #face0b;
+    text-transform: capitalize;
+}
+.carousel-indicators li{
+    background-color: #fa4f0b;
+}
+
+/* ==================about us==============*/
+
+
+.about{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.about .lead{
+    color:#888;
+    font-size: 25px;
+    margin-top: 15px;
+}
+.about img{
+    margin-top: 20px;
+    width:100%;
+}
+.about ul li{
+    list-style: none;
+    margin: 30px;
+    float: inline-start;
+}
+.about  ul li i{
+    margin-right: 30px;
+}
+
+/* =================advantages=============== */
+
+.advantages .card{
+    margin: 20px auto;
+    box-shadow: 3px 3px 10px #888 ;
+    background-color: #face0b;
+    border: none;
+}
+.advantages .card-img-top{
+    height:300px;
+}
+
+/* =================honor board=============== */
+
+.graduants{
+    margin-top: 70px;
+}
+.graduants .firstp{
+    margin-bottom: 40px;
+}
+.graduants .card{
+    margin: 40px auto;
+    box-shadow: 3px 3px 10px #888 ;
+    background-color: #face0b;
+    border: none;
+    height: 300px;
+    position: relative;
+}
+.graduants img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -18%;
+    left: 36%;
+}
+.graduants .card .card-body{
+    margin-top: 50px;
+}
+.graduants h4,
+.graduants p{
+    text-transform: capitalize;
+}
+.graduants p span{
+    text-transform: uppercase;
+}
+
+/* =============goals============ */
+
+.goals{
+    padding: 40px;
+    margin: 20px auto 20px;
+    line-height: 2em;
+    border-radius: 20px;
+    background-color: #face0b;
+    box-shadow: 3px 3px 10px #888;
+}
+.goals h2{
+margin-bottom: 30px;
+}
+
+/* =================footer========== */
+
+footer{
+    margin-top: 30px;
+    height: 70px;
+    background-color: #fa4f0b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer p span{
+    text-transform: uppercase;
+    color: #face0b;
+}
+
+
+
+
+@media (max-width:1199px){
+    .navbar .column{
+        width: 400px;
+        height: 1px;
+        background-color: #face0b;
+    }
+}
