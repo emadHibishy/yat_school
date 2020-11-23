@@ -1,0 +1,84 @@
+[
+    {
+        "course":"arabic",
+        "instructor":"mahmoud ebrahim ali",
+        "instructorEmail":"mahmoud@yahoo.com",
+        "begin":"20 february",
+        "end":"18 june",
+        "weeklyLectures":3,
+        "lectureDuration":"1 hour",
+        "days":"saturday monday wednesday"
+    },
+    {
+        "course":"english",
+        "instructor":"sanaa khaled elsayed",
+        "instructorEmail":"sanaa@yahoo.com",
+        "begin":"20 february",
+        "end":"18 june",
+        "weeklyLectures":3,
+        "lectureDuration":"1 hour",
+        "days":"sunday tueseday thrusday"
+    },
+    {
+        "course":"physics",
+        "instructor":"fathy mohamed abdullah",
+        "instructorEmail":"fathy@yahoo.com",
+        "begin":"20 february",
+        "end":"18 june",
+        "weeklyLectures":2,
+        "lectureDuration":"2 hour",
+        "days":"sunday thrusday"
+    },
+    {
+        "course":"mahematics",
+        "instructor":"khaled mostafa roshdy",
+        "instructorEmail":"khaled@yahoo.com",
+        "begin":"20 february",
+        "end":"18 june",
+        "weeklyLectures":4,
+        "lectureDuration":"1 hour",
+        "days":"sunday monday wednesday thrusday"
+    },
+    {
+        "course":"chemisry",
+        "instructor":"husien samir mahmoud",
+        "instructorEmail":"husien@yahoo.com",
+        "begin":"20 february",
+        "end":"18 june",
+        "weeklyLectures":2,
+        "lectureDuration":"2 hour",
+        "days":"saturday tueseday"
+    },
+    {
+        "course":"biology",
+        "instructor":"rehab mahmoug gomaa",
+        "instructorEmail":"rehab@yahoo.com",
+        "begin":"20 february",
+        "end":"18 june",
+        "weeklyLectures":2,
+        "lectureDuration":"2 hour",
+        "days":"monday thrusday"
+    },
+    {
+        "course":"geagraphy",
+        "instructor":"omar mostafa yosry",
+        "instructorEmail":"omar@yahoo.com",
+        "begin":"20 february",
+        "end":"18 june",
+        "weeklyLectures":2,
+        "lectureDuration":"1 hour",
+        "days":"tueseday saturday"
+    },
+    {
+        "course":"history",
+        "instructor":"alaa ali ebaid",
+        "instructorEmail":"fathy@yahoo.com",
+        "begin":"20 february",
+        "end":"18 june",
+        "weeklyLectures":2,
+        "lectureDuration":"1 hour",
+        "days":"monday wednesday"
+    }
+    
+]
+
