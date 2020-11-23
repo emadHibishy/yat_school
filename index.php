@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,14 +29,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-right">
-                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Teachers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Students</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lessons</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teachers.php">Teachers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="students.php">Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lessons.php">Lessons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
                     <span class="column"></span>
-                    <li class="nav-item"><a class="nav-link" href="">Sign Up</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="">Login</a></li> -->
                 </ul>
             </div>
         </div>
@@ -217,7 +218,7 @@
         <div class="container">
             <div class="row">
                 <!-- ========Doctor======= -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="card">
                         <img src="img/doctor.jpg" alt="">
                         <div class="card-body">
@@ -230,7 +231,7 @@
                     </div>
                 </div>
                 <!-- =========Engineer===== -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="card">
                         <img src="img/engineer.jpg" alt="">
                         <div class="card-body">
@@ -243,7 +244,7 @@
                     </div>
                 </div>
                 <!-- ==========photographer========= -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="card">
                         <img src="img/photographer.jpg" alt="">
                         <div class="card-body">
@@ -256,7 +257,7 @@
                     </div>
                 </div>
                 <!-- ==========artist========= -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="card">
                         <img src="img/artist.jpg" alt="">
                         <div class="card-body">
@@ -269,7 +270,7 @@
                     </div>
                 </div>
                 <!-- ==========counsel========= -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="card">
                         <img src="img/counsel.jpg" alt="">
                         <div class="card-body">
@@ -282,7 +283,7 @@
                     </div>
                 </div>
                 <!-- ===========writer========== -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="card">
                         <img src="img/writer.jpg" alt="">
                         <div class="card-body">
@@ -295,7 +296,7 @@
                     </div>
                 </div>
                 <!-- ==========astronaut========== -->
-                <div class="offset-md-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="offset-lg-2 col-lg-4 col-sm-6 col-xs-12">
                     <div class="card">
                         <img src="img/astronaut.jpg" alt="">
                         <div class="card-body">
@@ -308,7 +309,7 @@
                     </div>
                 </div>
                 <!-- ===========professor========== -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="card">
                         <img src="img/professor.jpg" alt="">
                         <div class="card-body">
