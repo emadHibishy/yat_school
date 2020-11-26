@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 <?php
   include_once('connection.php');
   session_start();
 ?>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +43,7 @@
                     <li class="nav-item active"><a class="nav-link" href="/">Lessons</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
                     <span class="column"></span>
+<<<<<<< HEAD
                     <?php
                     if(!$_SESSION){
                         echo '<li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>';
@@ -48,6 +52,9 @@
                         echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
                     }
                     ?>
+=======
+                    <li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                     <!-- <li class="nav-item"><a class="nav-link" href="">Login</a></li> -->
                 </ul>
             </div>

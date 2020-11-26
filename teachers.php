@@ -40,6 +40,7 @@
                     <li class="nav-item"><a class="nav-link" href="lessons.php">Lessons</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
                     <span class="column"></span>
+<<<<<<< HEAD
                     <?php
                     if(!$_SESSION){
                         echo '<li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>';
@@ -48,6 +49,9 @@
                         echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
                     }
                     ?>
+=======
+                    <li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                 </ul>
             </div>
         </div>
@@ -79,8 +83,12 @@
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 
                               <th></th>
+=======
+                                <th></th>
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -91,7 +99,11 @@
                         <tbody>
                         <!-- retrieving primary arabic teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 1 and subject_id =1';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 1 and subject_id =1';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -101,11 +113,15 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -132,7 +148,10 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -143,7 +162,11 @@
                         <tbody>
                         <!-- retrieving primary english teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 1 and subject_id =2';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 1 and subject_id =2';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -153,11 +176,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -184,7 +210,10 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -195,7 +224,11 @@
                         <tbody>
                         <!-- retrieving primary maths teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 1 and subject_id =5';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 1 and subject_id =5';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -205,11 +238,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -236,7 +272,10 @@
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -247,7 +286,11 @@
                         <tbody>
                         <!-- retrieving primary science teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 1 and subject_id =4';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 1 and subject_id =3';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -257,11 +300,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -275,6 +321,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="card">
                   <div class="card-header" id="primary-social-studies-header">
                     <h2 class="mb-0">
@@ -438,6 +485,8 @@
                   </div>
                 </div>
 
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
               </div>
         </div>
         <div class="info" id="prep-teachers">
@@ -457,7 +506,10 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -468,7 +520,11 @@
                         <tbody>
                         <!-- retrieving prep arabic teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =1';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =1';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -478,11 +534,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -509,7 +568,10 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -520,7 +582,11 @@
                         <tbody>
                         <!-- retrieving prep english teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =2';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =2';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -530,11 +596,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -561,7 +630,10 @@
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -572,7 +644,11 @@
                         <tbody>
                         <!-- retrieving secondary physics teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =5';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =5';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -582,11 +658,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -601,6 +680,7 @@
                     </div>
                   </div>
                 <div class="card">
+<<<<<<< HEAD
                   <div class="card-header" id="prep-social-studies-header">
                     <h2 class="mb-0">
                       <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#prep-social-studies" aria-expanded="false" aria-controls="prep-social-studies">
@@ -609,11 +689,24 @@
                     </h2>
                   </div>
                   <div id="prep-social-studies" class="collapse" aria-labelledby="prep-social-studies-header" data-parent="#accordionExamplePrep">
+=======
+                  <div class="card-header" id="prep-history-header">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#prep-history" aria-expanded="false" aria-controls="prep-history">
+                        HISTORY
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="prep-history" class="collapse" aria-labelledby="prep-history-header" data-parent="#accordionExamplePrep">
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                     <div class="card-body">
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -624,7 +717,11 @@
                         <tbody>
                         <!-- retrieving prep history teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =14';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =6';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -634,11 +731,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -653,6 +753,7 @@
                   </div>
                 </div>
                 <div class="card">
+<<<<<<< HEAD
                     <div class="card-header" id="prep-computer-header">
                       <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#prep-computer" aria-expanded="false" aria-controls="prep-computer">
@@ -661,11 +762,24 @@
                       </h2>
                     </div>
                     <div id="prep-computer" class="collapse" aria-labelledby="prep-computer-header" data-parent="#accordionExamplePrep">
+=======
+                    <div class="card-header" id="prep-geography-header">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#prep-geography" aria-expanded="false" aria-controls="prep-geography">
+                          GEOGRAPHY
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="prep-geography" class="collapse" aria-labelledby="prep-geography-header" data-parent="#accordionExamplePrep">
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                       <div class="card-body">
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -676,7 +790,11 @@
                         <tbody>
                         <!-- retrieving prep geography teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =13';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =7';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -686,11 +804,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -717,7 +838,10 @@
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -728,7 +852,11 @@
                         <tbody>
                         <!-- retrieving prep science teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =4';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 2 and subject_id =3';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -738,11 +866,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -756,6 +887,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="card">
                   <div class="card-header" id="prep-religion-header">
                     <h2 class="mb-0">
@@ -808,6 +940,22 @@
                     </div>
                   </div>
                 </div>
+=======
+                  <!-- <div class="card">
+                    <div class="card-header" id="prep-physics-header">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#prep-physics" aria-expanded="false" aria-controls="prep-physics">
+                          PHYSICS
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="prep-physics" class="collapse" aria-labelledby="prep-physics-header" data-parent="#accordionExamplePrep">
+                      <div class="card-body">
+                       <ul class="list-group"></ul>
+                      </div>
+                    </div>
+                  </div> -->
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
               </div>
         </div>
         <div class="info" id="secondary-teachers">
@@ -827,7 +975,10 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -838,7 +989,11 @@
                         <tbody>
                         <!-- retrieving secondary arabic teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =1';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =1';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -848,11 +1003,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -879,6 +1037,7 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
                                 <th>Name</th>
                                 <th>Phone</th>
@@ -932,6 +1091,8 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -942,7 +1103,11 @@
                         <tbody>
                         <!-- retrieving secondary english teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =3';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =2';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -952,11 +1117,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -983,7 +1151,10 @@
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -994,7 +1165,11 @@
                         <tbody>
                         <!-- retrieving secondary maths teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =5';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =5';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -1004,11 +1179,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -1035,7 +1213,10 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -1046,7 +1227,11 @@
                         <tbody>
                         <!-- retrieving secondary history teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =6';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =6';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -1056,11 +1241,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -1087,7 +1275,10 @@
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -1098,7 +1289,11 @@
                         <tbody>
                         <!-- retrieving secondary geography teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =7';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =7';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -1108,11 +1303,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -1139,7 +1337,10 @@
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -1150,7 +1351,11 @@
                         <tbody>
                         <!-- retrieving secondary chemistry teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =8';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =8';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -1160,11 +1365,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -1191,7 +1399,10 @@
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -1202,7 +1413,11 @@
                         <tbody>
                         <!-- retrieving secondary physics teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =9';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =9';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             
 
@@ -1212,11 +1427,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -1243,6 +1461,7 @@
                       <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                         <thead class="thead-dark">
                             <tr>
+<<<<<<< HEAD
                                 <th></th>
                                 <th>Name</th>
                                 <th>Phone</th>
@@ -1294,6 +1513,8 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th></th>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Email</th>
@@ -1304,7 +1525,11 @@
                         <tbody>
                         <!-- retrieving secondary biology teachers -->
                           <?php
+<<<<<<< HEAD
                             $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college, teachers.user_id FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =11';
+=======
+                            $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email ,university ,college FROM user , teachers WHERE user.id = teachers.user_id and stage_id = 3 and subject_id =10';
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                             $result_pr = $mysqli->query($query_pr);
                             if(!$result_pr){
                               die("error occured ". mysqli_error($mysqli));
@@ -1312,11 +1537,14 @@
                             // echo $result_pr->num_rows;
                             while($row = $result_pr->fetch_row()){
                               echo '<tr>';
+<<<<<<< HEAD
                               if($row[7] == $_SESSION['user_id']){
                               echo '<td> <button class="btn btn-warning">update</button></td>';
                               }else{
                                 echo '<td></td>';
                               }
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                               echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                               echo '<td>'. $row[3].'</td>';
                               echo '<td>'. $row[4].'</td>';
@@ -1330,6 +1558,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="card">
                   <div class="card-header" id="secondary-computer-header">
                     <h2 class="mb-0">
@@ -1479,6 +1708,25 @@
               
             </form> 
         </div>
+=======
+              </div>
+        </div>
+    </section>
+    <div class="popup-parent">
+      <div class="popup">
+        <form method="POST">
+          <div class="container">
+            <input class="form-control" type="text" name="first-name"id="first-name" placeholder="first name">
+            <input class="form-control" type="text" name="middle-name" id="middle-name" placeholder="middle name">
+            <input class="form-control" type="text" name="last-name" id="last-name" placeholder="last name">
+            <input class="form-control" type="email" name="email" id="email" placeholder="email">
+            <input class="form-control" type="text" name="phone" id="phone" placeholder="phone">
+            <input class="form-control" type="password" name="password" id="password" placeholder="password">
+            <input class="form-control" type="password" name="re-password" id="re-password" placeholder="password confirm">
+            <input class="btn" type="submit" value="SIGN UP">
+          </div>
+        </form> 
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
       </div>
     </div>
 

@@ -25,4 +25,8 @@ if ($mysqli->connect_errno) {
 // }
 
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013

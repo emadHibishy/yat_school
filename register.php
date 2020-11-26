@@ -200,18 +200,26 @@
                     <option>Department</option>
                     <option value="1">arabic</option>
                     <option value="2">english</option>
+<<<<<<< HEAD
                     <option value="3">french</option>
                     <option value="4">science</option>
+=======
+                    <option value="3">science</option>
+                    <option value="4">france</option>
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                     <option value="5">mathematics</option>
                     <option value="6">history</option>
                     <option value="7">geography</option>
                     <option value="8">chemistry</option>
                     <option value="9">physics</option>
                     <option value="10">biology</option>
+<<<<<<< HEAD
                     <option value="11">phylosofy</option>
                     <option value="12">religion</option>
                     <option value="13">computer</option>
                     <option value="14">social studies</option>
+=======
+>>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
                 </select>
                 
                 <select class="form-control stage"name="teacher-experience" id="teacher-experience">
