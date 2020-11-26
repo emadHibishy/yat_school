@@ -1,6 +1,6 @@
 <?php
   include_once("connection.php");
-  
+  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,14 @@
                     <li class="nav-item"><a class="nav-link" href="lessons.php">Lessons</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
                     <span class="column"></span>
-                    <li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>
+                    <?php
+                    if(!$_SESSION){
+                        echo '<li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>';
+                    }
+                    else{
+                        echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
+                    }
+                    ?>
                     <!-- <li class="nav-item"><a class="nav-link" href="">Login</a></li> -->
                 </ul>
             </div>
@@ -75,6 +82,7 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -83,7 +91,7 @@
                       <tbody>
                       <!-- retrieve primary first grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 1';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 1';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -93,6 +101,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -117,6 +130,7 @@
                   <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -125,7 +139,7 @@
                       <tbody>
                       <!-- retrieve primary second grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 2';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 2';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -135,6 +149,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -159,6 +178,7 @@
                   <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -167,7 +187,7 @@
                       <tbody>
                       <!-- retrieve primary third grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 3';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 3';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -177,6 +197,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -201,6 +226,7 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -209,7 +235,7 @@
                       <tbody>
                       <!-- retrieve primary fourth grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 4';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 4';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -219,6 +245,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -243,6 +274,7 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -251,7 +283,7 @@
                       <tbody>
                       <!-- retrieve primary fifth grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 5';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 5';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -261,6 +293,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -285,6 +322,7 @@
                     <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -293,7 +331,7 @@
                       <tbody>
                       <!-- retrieve primary sixth grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 6';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 1 and grade_id = 6';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -303,6 +341,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -333,6 +376,7 @@
                   <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -341,7 +385,7 @@
                       <tbody>
                       <!-- retrieve prep first grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 2 and grade_id = 1';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 2 and grade_id = 1';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -351,6 +395,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -375,6 +424,7 @@
                   <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -383,7 +433,7 @@
                       <tbody>
                       <!-- retrieve prep second grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 2 and grade_id = 2';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 2 and grade_id = 2';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -393,6 +443,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -417,6 +472,7 @@
                   <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -425,7 +481,7 @@
                       <tbody>
                       <!-- retrieve prep third grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 2 and grade_id = 3';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 2 and grade_id = 3';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -435,6 +491,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -465,6 +526,7 @@
                   <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -473,7 +535,7 @@
                       <tbody>
                       <!-- retrieve secondary first grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 3 and grade_id = 1';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 3 and grade_id = 1';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -483,6 +545,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -507,6 +574,7 @@
                   <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -515,7 +583,7 @@
                       <tbody>
                       <!-- retrieve secondary second grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 3 and grade_id = 2';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 3 and grade_id = 2';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -525,6 +593,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td> <button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -549,6 +622,7 @@
                   <table class="table table-striped table-bordered table-responsive-xs table-hover table-warning text-center">
                       <thead class="thead-dark">
                         <tr>
+                          <th></th>
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
@@ -557,7 +631,7 @@
                       <tbody>
                       <!-- retrieve secondary third grade -->
                         <?php
-                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email  FROM user,students  WHERE user.id = students.user_id and stage_id = 3 and grade_id = 3';
+                          $query_pr = 'SELECT first_name , middle_name ,last_name ,phone ,email,students.user_id  FROM user,students  WHERE user.id = students.user_id and stage_id = 3 and grade_id = 3';
                           $result_pr = $mysqli->query($query_pr);
                           
                         
@@ -567,6 +641,11 @@
                           // echo $result_pr->num_rows;
                           while($row = $result_pr->fetch_row()){
                             echo '<tr>';
+                            if ($row[5] == $_SESSION['user_id']){
+                              echo '<td><button class="btn btn-warning">update</button></td>';
+                            }else{
+                              echo '<td></td>';
+                            }
                             echo "<td>". $row[0]." ".$row[1]." ".$row[2]."</td>";
                             echo '<td>'. $row[3].'</td>';
                             echo '<td>'. $row[4].'</td>';
@@ -581,6 +660,51 @@
             </div>
       </div>
   </section>
+
+  <!-- ====================popup update data=============== -->
+  <div class="hidden">
+      <div class="hidden ">
+        <div class="container">
+          <form method="POST" action="validate_update_student.php">
+            <?php
+              $id = $_SESSION['user_id'];
+              $user_query = 'SELECT first_name ,middle_name ,last_name ,email ,phone ,password FROM user WHERE id ='.$id;
+              $student_query = 'SELECT stage_id,grade_id FROM students WHERE user_id='.$id;
+
+              $user_result = $mysqli->query($user_query);
+              $student_result = $mysqli->query($student_query);
+              $user_row = $user_result->fetch_row();
+              $student_row = $student_result->fetch_row();
+            
+              echo '<input class="form-control" type="text" value="'.$user_row[0].'" name="update-first-name"id="first-name">';
+              echo '<input class="form-control" type="text" value="'.$user_row[1].'" name="update-middle-name" id="middle-name">';
+              echo '<input class="form-control" type="text" value="'.$user_row[2].'"  name="update-last-name" id="last-name">';
+              echo '<input class="form-control" type="email" value="'.$user_row[3].'"  name="update-email" id="email">';
+              echo '<input class="form-control" type="text" value="'.$user_row[4].'"  name="update-phone" id="phone">';
+              echo '<input class="form-control" type="text" value="'.$user_row[5].'"  name="update-password" id="password">';
+              echo '<select class="form-control stage"value="'.$student_row[0].'" name="update-student-stage" id="stage">
+                    <option>Stage</option>
+                    <option value="1">Primary School</option>
+                    <option value="2">Middle School</option>
+                    <option value="3">High School</option>
+                  </select>';
+              echo '<select class="form-control grade" value="'.$student_row[1].'" name="update-student-grade" id="grade">
+              <option>Grade</option>
+              <option value="1">First Grade</option>
+              <option value="2">Second Grade</option>
+              <option value="3">Third Grade</option>
+              <option value="4">Fourth Grade</option>
+              <option value="5">Fifth Grade</option>
+              <option value="6">Sixth Grade</option>
+            </select>';
+              ?>
+              <input class="btn btn-info" type="submit" value="UPDATE">
+              <input class="btn btn-warning" type="button" value="CANCEL">
+              
+            </form> 
+        </div>
+      </div>
+    </div>
 
   <footer>
       <p class="lead text-center">&copy;All Copyrights reserved to <span>team a</span> - Yat Education Center</p>

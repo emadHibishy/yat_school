@@ -24,4 +24,14 @@ $(()=>{
         interval:1000
     });
 
+    //showing and hide popup
+    $('.card-body tbody .btn').click(function(){
+        $('body > div').removeClass('hidden').addClass('popup-parent');
+        $('body > div > div').removeClass('hidden').addClass('popup');
+    });
+    $('body > div > div .btn-warning').click(function(){
+        $('body > div').removeClass('popup-parent').addClass('hidden');
+        $('body > div > div').removeClass('popup').addClass('hidden');
+    });
+
 });

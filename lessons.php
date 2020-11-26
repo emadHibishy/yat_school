@@ -1,3 +1,7 @@
+<?php
+  include_once('connection.php');
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +40,14 @@
                     <li class="nav-item active"><a class="nav-link" href="/">Lessons</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
                     <span class="column"></span>
-                    <li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>
+                    <?php
+                    if(!$_SESSION){
+                        echo '<li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>';
+                    }
+                    else{
+                        echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
+                    }
+                    ?>
                     <!-- <li class="nav-item"><a class="nav-link" href="">Login</a></li> -->
                 </ul>
             </div>

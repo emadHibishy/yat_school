@@ -252,6 +252,32 @@ footer p span{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 9999;
+}
+.popup{
+    padding: 30px;
+    background-color: #FFF;
+    width: 400px;
+    height: 500px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -250px;
+    margin-left: -200px;
+    border-radius: 5px;
+}
+.hidden{
+    display: none;
+}
+.popup *{
+    margin: 10px auto;
+}
+input[type='submit']{
+    /* display: block; */
+    margin-left: 60px;
+}
+input[type='button']{
+    margin-right: 60px;
 }
 
 /* ===============contact us=================== */

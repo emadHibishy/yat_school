@@ -1,6 +1,6 @@
 <?php
 include_once('connection.php');
-session_start();
+session_destroy();
 $login_email = strtolower(htmlspecialchars($_POST['login-email']));
 $login_password = htmlspecialchars($_POST['login-password']);
 $login_data =[
@@ -20,6 +20,13 @@ if(!$result){
     $rows = $result->fetch_all();
     
     if (in_array($login_data,$rows)){
+        $getId = "SELECT id FROM user WHERE email = '$login_email'";
+        $user_id_data = $mysqli->query($getId);
+        $user_id = $user_id_data->fetch_row();
+        session_start();
+        $_SESSION['user_id']=$user_id[0];
+
+        echo $_SESSION['user_id'];
         header("Location: index.php");
         exit();
     }else{
