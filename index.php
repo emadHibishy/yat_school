@@ -1,4 +1,4 @@
-<<<<<<< HEAD:index.php
+
 <?php
     session_start();
 ?>
@@ -36,12 +36,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-right">
                     <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="teachers.php">Teachers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/teachers.php">Teachers</a></li>
                     <li class="nav-item"><a class="nav-link" href="students.php">Students</a></li>
                     <li class="nav-item"><a class="nav-link" href="lessons.php">Lessons</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
                     <span class="column"></span>
-<<<<<<< HEAD:index.php
+
                     <?php
                     if(!$_SESSION){
                         echo '<li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>';
