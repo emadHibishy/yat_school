@@ -1,10 +1,7 @@
-<<<<<<< HEAD:index.php
 <?php
+    require_once('connection.php');
     session_start();
 ?>
-=======
-
->>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013:index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,19 +38,24 @@
                     <li class="nav-item"><a class="nav-link" href="lessons.php">Lessons</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
                     <span class="column"></span>
-<<<<<<< HEAD:index.php
                     <?php
+
                     if(!$_SESSION){
                         echo '<li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>';
                     }
                     else{
-                        echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
+                        $query = "SELECT first_name FROM user WHERE id = " . $_SESSION['user_id'];
+                        $result = $mysqli->query($query);
+                        $firstName = $result->fetch_row();
+                        echo    '<li class="dropdown">
+                                    <img src="img/avatar.jpg" alt="">
+                                    <a href="#" class="dropdown-toggle navbar-right" data-toggle="dropdown"><span>'.$firstName[0].'</span><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="logout.php">Logout</a></li>
+                                    </ul>
+                                </li>';
                     }
                     ?>
-=======
-                    <li class="nav-item"><a class="nav-link" href="sign.php">Sign Up</a></li>
->>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013:index.html
-                    <!-- <li class="nav-item"><a class="nav-link" href="">Login</a></li> -->
                 </ul>
             </div>
         </div>

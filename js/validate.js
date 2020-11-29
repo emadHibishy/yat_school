@@ -70,4 +70,34 @@ $(function(){
             validate.fadeIn(500);
         }  
     });
+
+    // validate teacher update
+    $('.popup form').on('submit',function(event){
+        let validate = $('form .validate');
+        validate.empty();
+        if($('#teacher-experience').val()==0){
+            event.preventDefault();
+            validate.append('<p class="lead">please check experience field<p>');
+            validate.fadeIn(500);
+        }else if($('#teacher-stage').val()==0){
+            event.preventDefault();
+            validate.append('<p class="lead">please check stage field<p>');
+            validate.fadeIn(500);
+        }
+    });
+
+    // validate student update
+    $('.popup form').on('submit',function(event){
+        let validate = $('form .validate');
+        validate.empty();
+        if($('#stage').val()==0){
+            event.preventDefault();
+            validate.append('<p class="lead">please check stage field<p>');
+            validate.fadeIn(500);
+        }else if($('#grade').val()==0){
+            event.preventDefault();
+            validate.append('<p class="lead">please check grade field<p>');
+            validate.fadeIn(500);
+        } 
+    });
 });

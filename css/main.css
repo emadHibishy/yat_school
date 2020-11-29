@@ -44,12 +44,26 @@ body{
 .navbar-nav li{
     padding: 5px;
 }
-.navbar-nav li a {
+.navbar-nav li a,
+.dropdown a {
     font-size: 18px;
     margin:auto 8px;
     color: rgb(236, 236, 236);
     transition: all 0.5s;
     padding:  12px;
+    text-decoration: none;
+}
+.dropdown-menu{
+    background-color: #343a40;
+    transition: all 0.8s ease-in-out;
+}
+.dropdown-menu a:hover{
+    padding: 20px;
+}
+.navbar-nav li img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 .navbar-nav li.active a,
 .navbar-nav li.active a:hover{
@@ -107,8 +121,8 @@ body{
 }
 .about ul li{
     list-style: none;
-    margin: 30px;
-    float: inline-start;
+    margin: 28px;
+    text-align: center;
 }
 .about  ul li i{
     margin-right: 30px;
@@ -198,6 +212,9 @@ footer p span{
     width: 80%;
     margin: 170px auto 20px;
 }
+.lessons{
+    min-height: 329px;
+}
 .lessons h2{
     margin-bottom: 30px;
 }
@@ -252,14 +269,13 @@ footer p span{
     position: fixed;
     top: 0;
     left: 0;
-<<<<<<< HEAD
     z-index: 9999;
 }
 .popup{
     padding: 30px;
     background-color: #FFF;
     width: 400px;
-    height: 500px;
+    /* height: 500px; */
     position: fixed;
     left: 50%;
     top: 50%;
@@ -273,14 +289,26 @@ footer p span{
 .popup *{
     margin: 10px auto;
 }
+.popup .validate{
+    display: none;
+    width: 100%;
+    border: 1px solid rgb(182, 5, 5);
+    background-color: rgba(250, 0, 0, 0.37);
+    color: #f00;
+    border-radius: 5px;
+    min-height: 50px;
+    max-height: 200px;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 10px;
+}
+
 input[type='submit']{
     /* display: block; */
     margin-left: 60px;
 }
 input[type='button']{
     margin-right: 60px;
-=======
->>>>>>> ab3a309c3240d6cfd6a8946358f20b0b956e2013
 }
 
 /* ===============contact us=================== */
